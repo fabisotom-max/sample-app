@@ -17,5 +17,5 @@ echo "CMD python3 /home/myapp/sample_app.py" >> tempdir/Dockerfile
 
 cd tempdir
 docker build -t sampleapp .
-docker run -t -d -p 9999:9999 --name samplerunning sampleapp
+docker run --privileged -t -d -p 9999:9999 --name samplerunning sampleapp
 docker ps -a
